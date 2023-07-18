@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="handle"
+            type="cn.snow.interviewapp.activity.ServiceAcitivty.OnClickHandle" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        tools:context=".activity.ServiceAcitivty">
+
+        <Button
+            android:id="@+id/btn_long_open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{handle::onClickStartLongLifeService}"
+            android:text="Open Long-Life Service" />
+
+        <Button
+            android:id="@+id/btn_long_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{handle::onClickStopLongLifeService}"
+            android:text="Close Long-Life Service" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_bind_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{handle::onClickStartBindService}"
+                android:text="Bind Service" />
+
+            <Button
+                android:id="@+id/btn_unbind_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:onClick="@{handle::onClickStopBindService}"
+                android:text="Unbind" />
+
+
+            <Button
+                android:id="@+id/btn_bind_service_do"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:onClick="@{handle::onClickBindServiceDoSomething}"
+                android:text="Do Something" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btn_bind_service1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{handle::onClickStartBindService1}"
+                android:text="Start IPC Bind" />
+
+            <Button
+                android:id="@+id/btn_bind_service2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:onClick="@{handle::onClickStartBindService2}"
+                android:text="Close IPC Bind" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btn_bind_set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{handle::onClickSetIPCData}"
+                android:text="Set IPC Data" />
+
+            <Button
+                android:id="@+id/btn_bind_get"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:onClick="@{handle::onClickGetIPCData}"
+                android:text="Get IPC Data" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btn_bind_message_set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{handle::onClickSetIPCDataMessager}"
+                android:text="Messager Set IPC Data" />
+
+            <Button
+                android:id="@+id/btn_bind_message_get"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:onClick="@{handle::onClickGetIPCDataMessager}"
+                android:text="UnBind IPC Messager" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_bind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp" />
+
+
+    </LinearLayout>
+</layout>

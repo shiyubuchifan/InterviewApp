@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <data>
+
+        <variable
+            name="testData"
+            type="String" />
+
+        <variable
+            name="eventListener"
+            type="cn.snow.interviewapp.MainActivity.EventListener" />
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="15dp">
+
+            <Button
+                android:id="@+id/btn_testDataBinding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{eventListener::onClickTest}"
+                android:text="@{testData}"
+                app:backgroundTint="@color/teal_200" />
+
+
+            <Button
+                android:id="@+id/btn_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{eventListener::onClickActivity}"
+                android:text="Activity"
+                app:backgroundTint="@color/teal_200" />
+
+            <Button
+                android:id="@+id/btn_fragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{eventListener::onClickFragment}"
+                android:text="Fragment"
+                app:backgroundTint="@color/teal_200" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{eventListener::onClickService}"
+                    android:text="Service"
+                    app:backgroundTint="@color/teal_200" />
+
+                <Button
+                    android:id="@+id/btn_service_act"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:onClick="@{eventListener::onClickServiceAct}"
+                    android:text="Service Activity"
+                    app:backgroundTint="@color/teal_200" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_cp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{eventListener::onClickCp}"
+                    android:text="Content Provider"
+                    app:backgroundTint="@color/teal_200" />
+
+                <Button
+                    android:id="@+id/btn_cp_app"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:onClick="@{eventListener::onClickCpApp}"
+                    android:text="Open App"
+                    app:backgroundTint="@color/teal_200" />
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btn_br"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{eventListener::onClickBr}"
+                android:text="Broadcast Receiver"
+                app:backgroundTint="@color/teal_200" />
+
+            <Button
+                android:id="@+id/btn_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{eventListener::onClickMap}"
+                android:text="Map"
+                app:backgroundTint="@color/teal_200" />
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>
